@@ -1,4 +1,6 @@
-function Detail() {
+import Item from '../Item/Item'
+
+function Detail({ operations }) {
     return (
         <>
             <h2 className="text-center">Operation details</h2>
@@ -11,7 +13,11 @@ function Detail() {
                         <th>actions</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    {operations?.map((operation: object, index: number) => {
+                        return <Item key={index} operation={operation} />
+                    })}
+                </tbody>
             </table>
             <hr />
         </>
