@@ -1,0 +1,6 @@
+{
+    "elements": [
+        { "id": 1, "name": "product 1", "amount": 100 },
+        { "id": 2, "name": "product 2", "amount": -50 }
+    ]
+}
