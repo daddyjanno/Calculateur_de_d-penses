@@ -3,10 +3,16 @@ import Form from './components/Form/Form'
 import Total from './components/Total/Total'
 import Synthesis from './components/Synthesis/Synthesis'
 import Detail from './components/Detail/Detail'
+import { useSelector } from 'react-redux'
+import { getOperations } from './app/operationsSlice'
 
 function Calculator() {
+    const operations = useSelector(getOperations)
+    // operations.map((item) => console.log(item))
+    console.log(operations, typeof operations, Array.isArray(operations))
+
     return (
-        <div className="container-fluid bg-light template">
+        <div className="container-xl bg-light template">
             <header className="row">
                 <div className="col-6 offset-3">
                     <Total />
@@ -19,7 +25,7 @@ function Calculator() {
             </section>
             <main className="row">
                 <div className="col-6 offset-3">
-                    <Detail />
+                    <Detail operations={operations} />
                 </div>
             </main>
             <footer className="row">
