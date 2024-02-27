@@ -1,19 +1,23 @@
 import { FormEvent, useState } from 'react'
-import { useDispatch } from 'react-redux'
-import { addNewOperation } from '../../app/operationsSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { addNewOperation, getOperations } from '../../app/operationsSlice'
 
 function Form() {
     const [name, setName] = useState('')
     const [amount, setAmount] = useState(0)
     const dispatch = useDispatch()
+    const operationsLength = useSelector(getOperations).length
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
         const newOperation = {
+            id: operationsLength + 1,
             name: name,
             amount: amount,
         }
         dispatch(addNewOperation(newOperation))
+        setName('')
+        setAmount(0)
     }
     return (
         <>
@@ -53,6 +57,7 @@ function Form() {
                     />
                 </div>
             </form>
+            <br />
         </>
     )
 }

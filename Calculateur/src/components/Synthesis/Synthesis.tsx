@@ -10,6 +10,7 @@ function Synthesis() {
                     <h3 className="fs-4">Expenses</h3>
                 </div>
             </div>
+            <br />
         </div>
     )
 }

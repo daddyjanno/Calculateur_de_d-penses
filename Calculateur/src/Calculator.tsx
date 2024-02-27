@@ -8,8 +8,6 @@ import { getOperations } from './app/operationsSlice'
 
 function Calculator() {
     const operations = useSelector(getOperations)
-    // operations.map((item) => console.log(item))
-    console.log(operations, typeof operations, Array.isArray(operations))
 
     return (
         <div className="container-xl bg-light template">

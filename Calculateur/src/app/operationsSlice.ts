@@ -14,7 +14,7 @@ const operationSlice = createSlice({
     initialState,
     reducers: {
         addNewOperation(state, action) {
-            state.unshift(action.payload)
+            state.push(action.payload)
         },
         deleteOperation(state, action) {
             state.filter((item) => {

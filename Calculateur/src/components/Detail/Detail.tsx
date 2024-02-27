@@ -4,6 +4,7 @@ function Detail({ operations }) {
     return (
         <>
             <h2 className="text-center">Operation details</h2>
+            <br />
             <table className="table table-sm table-striped">
                 <thead>
                     <tr>
@@ -19,7 +20,7 @@ function Detail({ operations }) {
                     })}
                 </tbody>
             </table>
-            <hr />
+            <br />
         </>
     )
 }
