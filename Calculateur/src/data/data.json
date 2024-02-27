@@ -1,6 +1,9 @@
-{
-    "elements": [
-        { "id": 1, "name": "product 1", "amount": 100 },
-        { "id": 2, "name": "product 2", "amount": -50 }
-    ]
-}
+[
+    { "id": 1, "name": "product 1", "amount": 100 },
+    { "id": 2, "name": "product 2", "amount": -50 },
+    { "id": 3, "name": "product 3", "amount": 50 },
+    { "id": 4, "name": "product 4", "amount": 250 },
+    { "id": 5, "name": "product 5", "amount": -150 },
+    { "id": 6, "name": "product 6", "amount": -75 },
+    { "id": 7, "name": "product 7", "amount": 300 }
+]
