@@ -10,7 +10,7 @@ function Calculator() {
     const operations = useSelector(getOperations)
 
     return (
-        <div className="container-xl bg-light template">
+        <div className="container py-5 bg-light template">
             <header className="row">
                 <div className="col-6 offset-3">
                     <Total operations={operations} />
