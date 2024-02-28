@@ -6,6 +6,7 @@ interface IProps {
     name: string
     amount: number
 }
+
 const mockedData: IProps[] = createMockedData()
 const initialState = mockedData
 
@@ -17,7 +18,7 @@ const operationSlice = createSlice({
             state.push(action.payload)
         },
         deleteOperation(state, action) {
-            state.filter((item) => {
+            return state.filter((item) => {
                 return item.id !== action.payload
             })
         },
@@ -39,7 +40,7 @@ const operationSlice = createSlice({
 
 // selectors
 
-export const getOperations = (state: { operations: Array<object> }) =>
+export const getOperations = (state: { operations: Array<IProps> }) =>
     state.operations
 
 // actions
