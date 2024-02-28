@@ -5,8 +5,6 @@ interface IProps {
 }
 
 function Synthesis({ operations }: { operations: Array<IProps> }) {
-    console.log(operations)
-
     return (
         <div className="text-center">
             <h2>Synthesis</h2>
