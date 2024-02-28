@@ -33,6 +33,8 @@ function Item({ operation }: IProps) {
     }
 
     const handleDelete = (id: number) => {
+        console.log(id)
+
         dispatch(deleteOperation(id))
     }
 
@@ -90,7 +92,9 @@ function Item({ operation }: IProps) {
                 </button>
                 <button
                     className="btn btn-dark btn-sm ms-3"
-                    onClick={() => console.log(operation.id)}
+                    onClick={() => {
+                        handleDelete(operation.id)
+                    }}
                 >
                     delete
                 </button>
