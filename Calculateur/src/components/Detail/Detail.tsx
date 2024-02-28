@@ -1,6 +1,12 @@
 import Item from '../Item/Item'
 
-function Detail({ operations }) {
+interface IProps {
+    id: number
+    name: string
+    amount: number
+}
+
+function Detail({ operations }: { operations: Array<IProps> }) {
     return (
         <>
             <h2 className="text-center">Operation details</h2>
@@ -15,7 +21,7 @@ function Detail({ operations }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {operations?.map((operation: object, index: number) => {
+                    {operations?.map((operation: IProps, index: number) => {
                         return <Item key={index} operation={operation} />
                     })}
                 </tbody>
